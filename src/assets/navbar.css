@@ -1,0 +1,48 @@
+.nav-bar{
+    display: flex;
+    padding: .5rem 1rem;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(192, 192, 192);
+}
+.nav-bar >h3 {
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-bar >h3 >svg{
+    font-size: 1.5rem;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+    gap: .7rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-list > a:hover {
+    color: var(--cmain);
+}
+.navigation-list > a {
+    background-color: transparent;
+    color: var(--cblack);
+    text-decoration: none;
+    font-size: .7rem;
+}
+
+.sign-in {
+    background-color: var(--cmain);
+    border-radius: 7px;
+    padding: .5rem 1rem;
+    color: white;
+    font-weight: bold;
+}

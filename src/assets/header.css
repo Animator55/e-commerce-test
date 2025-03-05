@@ -1,0 +1,19 @@
+.header-carrousel {
+    margin: 3rem 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.header-item {
+    position: absolute;
+    background-color: red;
+}
+
+.router-buttons {
+    position: absolute;
+    left: 1rem;
+}
+.router-buttons:last-of-type {
+    right: 1rem;
+}
