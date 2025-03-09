@@ -15,6 +15,10 @@ export default function NewArrival() {
         <ul className="grid">
             {arrival.map(el => {
                 return <li key={Math.random()} >
+                    <img 
+                        style={{background: el.image}}
+                        //src={el.image}
+                    />
                     <p>{el.category}</p>
                     <h3>{el.name}</h3>
                     <p>{el.price}</p>
