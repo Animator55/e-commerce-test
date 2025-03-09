@@ -1,0 +1,23 @@
+.--categories {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+.categories_block{
+    border-radius: 15px;
+    position: relative;
+    width: 23%;
+    height: calc(23dvw * 1.1);
+    overflow: hidden;
+}
+.categories_block > img {
+    width: 100%;
+    height: 100%;
+}
+
+.categories_block > h3 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: black;
+}

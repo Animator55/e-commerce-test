@@ -1,20 +1,25 @@
-
+import "../assets/categories.css"
 
 const categories : {name: string, image: string}[]=[
-    {name: "Smart Phone", image: ""},
-    {name: "Laptop", image: ""},
-    {name: "Headphones", image: ""},
-    {name: "Smart Watch", image: ""},
+    {name: "Smart Phone", image: "lightpink"},
+    {name: "Laptop", image: "lightblue"},
+    {name: "Headphones", image: "gray"},
+    {name: "Smart Watch", image: "lightgray"},
 ]
 
 
 export default function Categories (){
-    return <ul className="block">
+    return <ul className="block --categories">
         {categories.map(el=>{
             return <li
-                key={Math.random()}
+                key={Math.random()} 
+                className="categories_block"
             >
-                <img src={el.image} alt="" />
+                <img 
+                style={{backgroundColor: el.image}}
+                // src={el.image} 
+                alt="" 
+                />
                 <h3>{el.name}</h3>
             </li>
         })}
