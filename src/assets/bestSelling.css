@@ -1,0 +1,26 @@
+.--no_padding_h {
+    padding-left: 0;
+    padding-right: 0;
+    align-items: normal;
+    text-align: center;
+}
+
+.mandatory_ul {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 2.6dvw;
+    justify-content: space-between;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    max-width: calc(100% - 6rem);
+    padding-left:3rem;
+    padding-right: 3rem;
+    margin-top: 3rem;
+}
+
+.mandatory_ul > li {
+    scroll-snap-align:center;
+    position: relative;
+    min-width: 23%;
+}
