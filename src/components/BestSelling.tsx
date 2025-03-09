@@ -1,4 +1,4 @@
-import Product from "./_Product"
+import Product from "./molecule/_Product"
 
 const prods: { name: string, price: string, image: string }[] = [
 

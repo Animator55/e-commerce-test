@@ -1,4 +1,4 @@
-import Product from "./_Product"
+import Product from "./molecule/_Product"
 
 const featured: {name: string, image: string, price: string}[] = [
     { "image": "", "name": "Apple Mac", "price": "663 €" },
