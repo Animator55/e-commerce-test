@@ -1,5 +1,6 @@
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "../../assets/_product.css"
 
 type Props = {
     el: {image: string, name: string, price: string} 
@@ -7,11 +8,18 @@ type Props = {
 
 export default function Product({ el }:Props) {
     return <li
+        className="product_block"
         key={Math.random()}
     >
-        <img src={el.image}></img>
+        <img 
+        style={{
+            background:el.image,
+            height: "23dvw"
+        }}
+        // src={el.image}
+        ></img>
         <div className="action-zone">
-            <div>
+            <div className="action_zone--content">
                 <h4>{el.name}</h4>
                 <p>{el.price}</p>
             </div>

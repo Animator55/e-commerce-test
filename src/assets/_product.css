@@ -1,0 +1,36 @@
+.product_block > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.action-zone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+    padding: 1rem .75rem;
+    margin-top: .5rem;
+    margin-bottom: 5px;
+}
+.action_zone--content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: .4rem;
+    gap: .35rem;   
+    text-align: start;
+}
+.action_zone--content > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+    color: gray;
+}
+.action_zone--content > :last-child {
+    color: black;
+    font-weight: bold;
+}
+
