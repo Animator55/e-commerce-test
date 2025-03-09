@@ -1,12 +1,13 @@
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import "../assets/header.css"
 
 const clientsList: { image: any, name: string, description: string, price: string }[] = [
-    { "image": "", "name": "Apple iPhone 16 Pro", "description": "Smartphone de 128GB con pantalla Super Retina XDR de 6,1 pulgadas, chip A18 Bionic y sistema de cámara Pro.", "price": "1.167 €" },
-    { "image": "", "name": "Apple iPad 10,9\" (2024) Wi-Fi (10ª Gen)", "description": "Tablet con pantalla de 10,9 pulgadas, chip A14 Bionic y 64GB de almacenamiento.", "price": "369 €" },
-    { "image": "", "name": "Apple AirPods 4", "description": "Auriculares inalámbricos Bluetooth con estuche de carga y cancelación activa de ruido.", "price": "149 €" },
-    { "image": "", "name": "Samsung Galaxy S25", "description": "Smartphone con pantalla AMOLED de 6,2 pulgadas, procesador Exynos 2200 y cámara triple de 50MP.", "price": "799 €" },
+    { "image": "white", "name": "Apple iPhone 16 Pro", "description": "Smartphone de 128GB con pantalla Super Retina XDR de 6,1 pulgadas, chip A18 Bionic y sistema de cámara Pro.", "price": "1.167 €" },
+    { "image": "white", "name": "Apple iPad 10,9\" (2024) Wi-Fi (10ª Gen)", "description": "Tablet con pantalla de 10,9 pulgadas, chip A14 Bionic y 64GB de almacenamiento.", "price": "369 €" },
+    { "image": "white", "name": "Apple AirPods 4", "description": "Auriculares inalámbricos Bluetooth con estuche de carga y cancelación activa de ruido.", "price": "149 €" },
+    { "image": "white", "name": "Samsung Galaxy S25", "description": "Smartphone con pantalla AMOLED de 6,2 pulgadas, procesador Exynos 2200 y cámara triple de 50MP.", "price": "799 €" },
 ]
 
 
@@ -18,14 +19,14 @@ export default function Header() {
         const quoteData = clientsList[index]
         return <div className="header-item">
             <img
-                src={quoteData.image}
-                
+                style={{backgroundColor: quoteData.image}}
+                // src={quoteData.image}
             />
             <div className="header-content">
-                <h3>{quoteData.name}</h3>
-                <p className="title">{quoteData.description}</p>
-                <p className="price">{quoteData.price}</p>
-                <button>Shop Now</button>
+                <h3 className="header-title">{quoteData.name}</h3>
+                <p className="header-description">{quoteData.description}</p>
+                <p className="header-price">{quoteData.price}</p>
+                <button className="btn">Shop Now</button>
             </div>
         </div>
     }
@@ -47,7 +48,7 @@ export default function Header() {
         </button>
         <QuoteItem index={prevIndex} />
         <QuoteItem index={carrouselIndex} />
-        <QuoteItem index={nexIndex} /> : <div></div>
+        <QuoteItem index={nexIndex} /> 
         <button className="router-buttons" onClick={() => { move(nexIndex, false) }}>
             <FontAwesomeIcon icon={faCaretRight} />
         </button>
