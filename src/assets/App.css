@@ -38,6 +38,10 @@ button {
     background-color: transparent;
     cursor: pointer;
 }
+img {
+    border: none;
+    outline: none;
+}
 
 h1,
 h2,
@@ -74,4 +78,18 @@ select {
     font-size: .75rem;
     color: gray;
     background-color: rgb(238, 238, 238);
+}
+
+/***/
+
+.btn {
+    background-color:#6819e6;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0;
+    border-radius: 8px;
 }
