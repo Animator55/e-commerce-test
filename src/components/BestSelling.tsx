@@ -15,7 +15,7 @@ const prods: { name: string, price: string, image: string }[] = [
 export default function BestSelling() {
     /// mandatory
     return <section className="block --no_padding_h" id="Best Selling">
-        <h3>Best Selling</h3>
+        <h3><b style={{color: "var(--cmain)"}}>Best</b> Selling</h3>
         <ul className="mandatory_ul">
             {prods.map(el => {
                 return <Product height="23dvw" key={Math.random()} el={el} />

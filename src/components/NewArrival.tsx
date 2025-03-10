@@ -14,7 +14,7 @@ const arrival = [
 export default function NewArrival() {
     /// mandatory
     return <section className="block --new_arrival_block" id="News">
-        <h3>New Arrival</h3>
+        <h3><b style={{color: "var(--cmain)"}}>New</b> Arrival</h3>
         <ul className="new_arrival_grid">
             {arrival.map(el => {
                 return <ProductHorizontal el={el}/>

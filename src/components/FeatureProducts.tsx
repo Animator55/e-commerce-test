@@ -13,7 +13,7 @@ const mainFeatured =
 
 export default function FeatureProducts() {
     return <section className="block --featured_block" id="Featured">
-        <h3>Feature Products</h3>
+        <h3><b style={{color: "var(--cmain)"}}>Feature</b> Products</h3>
         <section className="featured_block">
             <div className="featured_image_main">
                 <div className="featured_image_main_content">
