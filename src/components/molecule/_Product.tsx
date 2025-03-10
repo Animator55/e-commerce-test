@@ -4,9 +4,10 @@ import "../../assets/_product.css"
 
 type Props = {
     el: {image: string, name: string, price: string} 
+    height: string
 }
 
-export default function Product({ el }:Props) {
+export default function Product({ el, height }:Props) {
     return <li
         className="product_block"
         key={Math.random()}
@@ -14,7 +15,7 @@ export default function Product({ el }:Props) {
         <img 
         style={{
             background:el.image,
-            height: "23dvw"
+            height: height
         }}
         // src={el.image}
         ></img>
