@@ -1,0 +1,33 @@
+.featured_block {
+    display: flex;
+    width: 100%;
+    gap: 5%;
+}
+
+.featured_image_main {
+    width: 60%;
+    display: flex;
+    position: relative;
+    top: 7px;
+}
+.featured_image_main > img {
+    height: 100%;
+    width: 100%;
+}
+
+.featured_image_main_content {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.featured_grid {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 5%;
+    padding-right: 5%;
+}
