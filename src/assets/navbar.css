@@ -1,11 +1,11 @@
 .nav-bar{
     display: flex;
-    padding: .5rem 1rem;
-    justify-content: space-around;
+    padding: .5rem 2rem;
     align-items: center;
     position: fixed;
     z-index: 5;
-    width: 100%;
+    gap: 1rem;
+    width: calc(100% - 4rem);
     background-color: white;
     box-shadow: 0 0 10px rgb(192, 192, 192);
 }
@@ -26,7 +26,7 @@
     justify-content: space-around;
     gap: .7rem;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .navigation-list > a:hover {
