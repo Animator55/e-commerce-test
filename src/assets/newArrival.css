@@ -1,0 +1,8 @@
+.new_arrival_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 29%);
+    padding: 0 2%;
+    justify-content: center;
+    gap: 1.5rem 2%;
+    width: 100%;
+}

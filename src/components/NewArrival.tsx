@@ -1,3 +1,6 @@
+import ProductHorizontal from "./molecule/_Product--horizontal"
+import "../assets/newArrival.css"
+
 const arrival = [
     { "image": "", category: "Phone", "name": "Nothing Phone (3a)", "description": "Smartphone asequible con diseño innovador y características destacadas.", "price": "599 €" },
     { "image": "", category: "Watch", "name": "Samsung Galaxy Watch 7", "description": "Reloj inteligente con pantalla Super AMOLED y monitoreo avanzado de salud.", "price": "349 €" },
@@ -12,17 +15,9 @@ export default function NewArrival() {
     /// mandatory
     return <section className="block">
         <h3>New Arrival</h3>
-        <ul className="grid">
+        <ul className="new_arrival_grid">
             {arrival.map(el => {
-                return <li key={Math.random()} >
-                    <img 
-                        style={{background: el.image}}
-                        //src={el.image}
-                    />
-                    <p>{el.category}</p>
-                    <h3>{el.name}</h3>
-                    <p>{el.price}</p>
-                </li>
+                return <ProductHorizontal el={el}/>
             })}
         </ul>
     </section>
