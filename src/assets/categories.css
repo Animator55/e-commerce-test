@@ -2,6 +2,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 3rem;
+    padding-top: 6rem;
 }
 .categories_block{
     border-radius: 15px;

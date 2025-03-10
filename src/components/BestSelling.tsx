@@ -14,7 +14,7 @@ const prods: { name: string, price: string, image: string }[] = [
 
 export default function BestSelling() {
     /// mandatory
-    return <section className="block --no_padding_h">
+    return <section className="block --no_padding_h" id="Best Selling">
         <h3>Best Selling</h3>
         <ul className="mandatory_ul">
             {prods.map(el => {

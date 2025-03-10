@@ -4,10 +4,11 @@ import { faMagnifyingGlass, faT } from "@fortawesome/free-solid-svg-icons"
 
 export default function NavBar() {
     const points = [
-        "Search",
-        "Beneficts",
-        "Process",
-        "Services",
+        "Top",
+        "Categories",
+        "Best",
+        "Featured",
+        "News",
         "Clients",
         "Contact",
     ]

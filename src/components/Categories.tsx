@@ -9,7 +9,7 @@ const categories : {name: string, image: string}[]=[
 
 
 export default function Categories (){
-    return <ul className="block --categories">
+    return <ul className="block --categories" id="Categories">
         {categories.map(el=>{
             return <li
                 key={Math.random()} 

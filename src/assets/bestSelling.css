@@ -1,6 +1,7 @@
 .--no_padding_h {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 6rem;
     align-items: normal;
     text-align: center;
 }
