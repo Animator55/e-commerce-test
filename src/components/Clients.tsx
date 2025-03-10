@@ -1,50 +1,98 @@
-type clientsType = { image: any, quote: string, name: string, ranking: number }
+import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from "react"
+import "../assets/clients.css"
+import person1 from "../assets/images/people/person1.jpg"
+import person4 from "../assets/images/people/person4.jpg"
+import person5 from "../assets/images/people/person5.jpg"
+import person6 from "../assets/images/people/person6.jpg"
+import person7 from "../assets/images/people/person7.jpg"
+import person8 from "../assets/images/people/person8.jpg"
+import person9 from "../assets/images/people/person9.jpg"
 
-const clients: clientsType[][] = [
-    [
-        { "image": "", "quote": "Siempre compro aquí porque son confiables y rápidos.", "name": "Rodrigo H.", "ranking": 5 },
-        { "image": "", "quote": "La atención fue increíble, resolvieron todas mis dudas.", "name": "Carla V.", "ranking": 4.9 },
-        { "image": "", "quote": "Compré un MacBook y llegó antes de lo esperado. 100% recomendado.", "name": "Emiliano S.", "ranking": 5 },
-        { "image": "", "quote": "Gran variedad de productos y excelentes precios.", "name": "Patricia K.", "ranking": 4.8 },
-        { "image": "", "quote": "Me enviaron un regalo junto con mi compra, ¡un gran detalle!", "name": "Gabriel O.", "ranking": 5 },
-        { "image": "", "quote": "Garantía oficial y soporte postventa. Estoy muy satisfecho.", "name": "Natalia R.", "ranking": 5 },
-        { "image": "", "quote": "Ofrecen descuentos por compras en efectivo. Muy conveniente.", "name": "Fabián M.", "ranking": 4.9 },
-        { "image": "", "quote": "Compré un iPhone y la caja estaba impecable, todo sellado.", "name": "Andrea F.", "ranking": 5 },
-        { "image": "", "quote": "Buena comunicación en todo el proceso de compra.", "name": "Leonardo E.", "ranking": 4.8 },
-        { "image": "", "quote": "El seguimiento del pedido fue excelente, sabía exactamente cuándo llegaba.", "name": "Isabela N.", "ranking": 5 }
-      ],
-      [
-        { "image": "", "quote": "La mejor tienda online de tecnología. Compré un iPhone y llegó antes de lo esperado.", "name": "Lucas G.", "ranking": 5 },
-        { "image": "", "quote": "Me encantó la experiencia de compra. Todo súper fácil y seguro.", "name": "María J.", "ranking": 4.9 },
-        { "image": "", "quote": "Gran servicio. Compré un iPad y llegó perfectamente embalado.", "name": "Andrés R.", "ranking": 5 },
-        { "image": "", "quote": "Buena relación calidad-precio. Productos originales y con garantía.", "name": "Fernanda S.", "ranking": 4.8 },
-        { "image": "", "quote": "El mejor precio para mi Apple Watch. Volveré a comprar aquí.", "name": "Martín L.", "ranking": 5 },
-        { "image": "", "quote": "Los AirPods llegaron en perfecto estado y funcionan de maravilla.", "name": "Sofía P.", "ranking": 4.9 },
-        { "image": "", "quote": "Servicio al cliente excelente. Me ayudaron a elegir el mejor producto.", "name": "Javier D.", "ranking": 5 },
-        { "image": "", "quote": "Tienen stock de los últimos modelos y los envíos son rápidos.", "name": "Valeria C.", "ranking": 4.8 },
-        { "image": "", "quote": "Muy buena experiencia de compra, todo claro y sin sorpresas.", "name": "Carlos T.", "ranking": 5 },
-        { "image": "", "quote": "Me ofrecieron facilidades de pago y cuotas sin interés. ¡Excelente!", "name": "Daniela M.", "ranking": 5 }
-      ]
-]
-  
 export default function Clients() {
-    const AutoCarrousel = ({ list }: { list: clientsType[] }) => {
-        if (!list || list.length < 1) return
-        return <ul>
-            {list.map(el => {
-                return <div className="quote-item" key={Math.random()}>
-                    <img src={el.image} />
-                    <div className="quote-content">
-                        <p>"{el.quote}"</p>
-                        <h5>{el.name}</h5>
-                    </div>
-                </div>
-            })}
-        </ul>
+    const [carrouselIndex, setIndex] = React.useState(0)
+
+    const clientsList: { image: any, quote: string, name: string, description: string }[] = [
+        {
+            image: person1,
+            quote: "The service was absolutely impeccable. I felt like royalty from the moment I stepped in.",
+            name: "Emily Carter",
+            description: "Frequent traveler, New York"
+        },
+        {
+            image: person7,
+            quote: "Best sleep I've had in months! The bed was so comfortable, and the atmosphere was so peaceful.",
+            name: "Laura Chen",
+            description: "Writer, Melbourne"
+        },
+        {
+            image: person5,
+            quote: "The breakfast buffet was divine. Fresh ingredients, amazing variety, and great coffee!",
+            name: "Marco Rossi",
+            description: "Food critic, Rome"
+        },
+        {
+            image: person6,
+            quote: "I've stayed in many luxury hotels, but this one felt like home. The warmth of the staff made all the difference.",
+            name: "Ethan Walker",
+            description: "Fashion designer, Paris"
+        },
+        {
+            image: person4,
+            quote: "Location is perfect, right in the heart of the city. Walkable distance to all major attractions.",
+            name: "Samuel Kim",
+            description: "Tourist, Seoul"
+        },
+        {
+            image: person8,
+            quote: "An absolute gem! The spa services were top-notch, and I left feeling completely rejuvenated.",
+            name: "Olivia White",
+            description: "Wellness coach, Toronto"
+        },
+        {
+            image: person9,
+            quote: "I felt incredibly safe and well taken care of throughout my stay. Perfect for solo travelers!",
+            name: "Isabelle Dupont",
+            description: "Solo adventurer, Cape Town"
+        }
+    ];
+
+    const QuoteItem = ({ index }: { index: number }) => {
+        const quoteData = clientsList[index]
+        return <div className="quote-item">
+            <img src={ quoteData.image}/>
+            <div className="quote-content">
+                <p>"{quoteData.quote}"</p>
+                <h5>{quoteData.name}</h5>
+                <p className="title">{quoteData.description}</p>
+            </div>
+        </div>
+    }
+    const prevIndex = carrouselIndex - 1 === -1 ? (clientsList.length - 1) : (carrouselIndex - 1)
+    const nexIndex = carrouselIndex + 1 === clientsList.length ? 0 : (carrouselIndex + 1)
+
+    const move = (index: number, toLeft: boolean)=>{
+        let carrousel = document.querySelector(".carrousel") as HTMLDivElement
+        if(carrousel) carrousel.classList.add(toLeft ? "rotate-toLeft": "rotate-toRight")
+            setTimeout(()=>{
+                setIndex(index)
+                if(carrousel) carrousel.classList.remove(toLeft ? "rotate-toLeft": "rotate-toRight")
+        }, 300)
     }
 
-    return <section className="block">
-        <AutoCarrousel list={clients[0]}/>
-        <AutoCarrousel list={clients[1]}/>
+    return <section className="block clients-block" id="Clients">
+        <h4>What our <b style={{color: "var(--cmain)"}}>Clients</b> say</h4>
+        <div className="carrousel">
+            <button onClick={() => { move(prevIndex, true) }}>
+                <FontAwesomeIcon icon={faCaretLeft} />
+            </button>
+            <QuoteItem index={prevIndex} />
+            <QuoteItem index={carrouselIndex} />
+            <QuoteItem index={nexIndex} />
+            <button onClick={() => { move(nexIndex, false) }}>
+                <FontAwesomeIcon icon={faCaretRight} />
+            </button>
+        </div>
     </section>
 }
