@@ -82,7 +82,7 @@ export default function Clients() {
     }
 
     return <section className="block clients-block" id="Clients">
-        <h4>What our <b style={{color: "var(--cmain)"}}>Clients</b> say</h4>
+        <h3>What our <b style={{color: "var(--cmain)"}}>Clients</b> say</h3>
         <div className="carrousel">
             <button onClick={() => { move(prevIndex, true) }}>
                 <FontAwesomeIcon icon={faCaretLeft} />

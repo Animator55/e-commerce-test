@@ -12,8 +12,8 @@ const mainFeatured =
 
 
 export default function FeatureProducts() {
-    return <section className="block">
-        <h4>Feature Products</h4>
+    return <section className="block --featured_block">
+        <h3>Feature Products</h3>
         <section className="featured_block">
             <div className="featured_image_main">
                 <div className="featured_image_main_content">
