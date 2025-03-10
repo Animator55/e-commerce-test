@@ -1,0 +1,180 @@
+.clients-block {
+    padding: 5rem 0rem 3rem !important;
+}
+
+.rotate-toRight>button {
+    pointer-events: none;
+}
+
+.rotate-toLeft>button {
+    pointer-events: none;
+}
+
+.carrousel>button {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    z-index: 4;
+    left: 0;
+    font-size: 2rem;
+}
+
+.carrousel>button:last-child {
+    left: auto;
+    right: 0;
+}
+
+.carrousel {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 40dvh;
+    justify-content: center;
+    perspective: 1000px;
+    padding: 1rem 0;
+}
+
+
+
+/***/
+
+
+
+
+
+
+
+.rotate-toRight>.quote-item:nth-of-type(1),
+.rotate-toLeft>.quote-item:nth-of-type(3) {
+    opacity: 0;
+    scale: 0;
+    transition: all 100ms;
+}
+
+.rotate-toLeft>.quote-item:nth-of-type(2),
+.rotate-toRight>.quote-item:nth-of-type(2) {
+    z-index: 0;
+    scale: .8;
+    opacity: .7;
+    transition: all 300ms;
+}
+
+.rotate-toLeft>.quote-item:nth-of-type(2) {
+    transform: rotateY(25deg);
+    left: auto;
+    right: -25%;
+    transition: all 300ms;
+}
+
+.rotate-toRight>.quote-item:nth-of-type(2) {
+    transform: rotateY(-25deg);
+    left: -25%;
+    right: auto;
+    transition: all 300ms;
+}
+
+.rotate-toLeft>.quote-item:nth-of-type(1) {
+    right: auto;
+    left: 25%;
+    animation: none;
+    transform: rotate(0deg);
+    scale: 1;
+    opacity: 1;
+    z-index: 2;
+    transition: all 300ms;
+}
+
+.rotate-toRight>.quote-item:nth-of-type(3) {
+    left: auto;
+    right: 25%;
+    animation: none;
+    transform: rotate(0deg);
+    scale: 1;
+    opacity: 1;
+    transition: all 300ms;
+    z-index: 3;
+}
+
+/***/
+
+.quote-item {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px gray;
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    background-color: #fff;
+    width: 50%;
+    height: 40dvh;
+    transition: all 300ms;
+}
+
+.quote-item:nth-of-type(2) {
+    z-index: 2;
+    right: 25%;
+    left: 25%;
+}
+
+.quote-item:nth-of-type(1),
+.quote-item:nth-of-type(3) {
+    z-index: 0;
+    scale: .8;
+    opacity: .6;
+    transform: rotateY(-25deg);
+    left: -25%;
+    right: auto;
+}
+
+.quote-item:nth-of-type(3) {
+    transform: rotateY(25deg);
+    left: auto;
+    right: -25%;
+}
+
+
+
+
+
+
+
+
+/***/
+.quote-item>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 40dvh;
+}
+
+.quote-item>.quote-content {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: calc(100% - 3rem);
+    height: calc(40dvh - 3rem);
+    padding: 1.5rem;
+    background-color: beige;
+}
+
+.quote-content>p {
+    font-style: italic;
+    position: relative;
+}
+
+.quote-content>h5 {
+    margin-top: auto;
+}
+
+.quote-content>.title {
+    font-size: .7rem;
+    color: rgb(78, 78, 78);
+}
