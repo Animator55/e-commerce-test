@@ -18,7 +18,7 @@ export default function BestSelling() {
         <h3>Best Selling</h3>
         <ul className="mandatory_ul">
             {prods.map(el => {
-                return <Product key={Math.random()} el={el} />
+                return <Product height="23dvw" key={Math.random()} el={el} />
             })}
         </ul>
     </section>
