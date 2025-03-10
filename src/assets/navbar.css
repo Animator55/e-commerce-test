@@ -39,10 +39,11 @@
     font-size: .7rem;
 }
 
-.sign-in {
+.--sign-in {
     background-color: var(--cmain);
     border-radius: 7px;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem!important;
+    font-size: .7rem!important;
     color: white;
     font-weight: bold;
 }

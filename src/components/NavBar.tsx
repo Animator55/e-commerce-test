@@ -25,6 +25,6 @@ export default function NavBar() {
             })}
         </ul>
         <button><FontAwesomeIcon icon={faMagnifyingGlass}/></button>
-        <button className="sign-in">Sign Up</button>
+        <button className="--sign-in btn">Sign Up</button>
     </nav>
 }
