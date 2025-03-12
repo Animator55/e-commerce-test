@@ -11,10 +11,10 @@ export default function ProductHorizontal ({el}: Props){
             key={Math.random()}
         >
             <img 
-            style={{
-                background:el.image
-            }}
-            // src={el.image}
+            // style={{
+            //     background:el.image
+            // }}
+            src={el.image}
             ></img>
             <div className="action-zone">
                 <div className="action_zone--content">

@@ -12,20 +12,28 @@
     width: 60%;
     display: flex;
     position: relative;
+    overflow: hidden;
     top: 7px;
+    border-radius: 10px;
 }
 .featured_image_main > img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .featured_image_main_content {
     display: flex;
-    flex-direction: column;
-    gap: .6rem;
+    align-items: center;
+    gap: 1rem;
     position: absolute;
-    left: 2rem;
-    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.66) 40%);
+    padding: 2rem;
+    padding-bottom: 3rem;
+    color: white;
+    top: 0;
 }
 
 .featured_grid {
