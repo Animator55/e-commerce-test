@@ -14,10 +14,10 @@ export default function Product({ el, height }:Props) {
     >
         <img 
         style={{
-            background:el.image,
+            // background:el.image,
             height: height
-        }}
-        // src={el.image}
+        }}  
+        src={el.image}
         ></img>
         <div className="action-zone">
             <div className="action_zone--content">

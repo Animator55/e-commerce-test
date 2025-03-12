@@ -1,14 +1,19 @@
 import Product from "./molecule/_Product"
 import "../assets/featuredProducts.css"
+import image1 from "../assets/images/phone-1.jpg"
+import image2 from "../assets/images/pad-1.jpg"
+import image3 from "../assets/images/head-1.jpg"
+import image4 from "../assets/images/laptop-1.jpg"
+import image5 from "../assets/images/watch-1.jpg"
 
 const featured: { name: string, image: string, price: string }[] = [
-    { "image": "white", "name": "Apple Watch Series 10", "price": "429 €" },
-    { "image": "white", "name": "Apple iPad 10,9\" (2024) Wi-Fi (10ª Gen)", "price": "369 €" },
-    { "image": "white", "name": "Apple iPhone 16 Pro", "price": "1.167 €" },
-    { "image": "white", "name": "Apple AirPods 4", "price": "149 €" },
+    { "image": image5, "name": "Apple Watch Series 10", "price": "429 €" },
+    { "image": image2, "name": "Apple iPad 10,9\" (2024) Wi-Fi (10ª Gen)", "price": "369 €" },
+    { "image": image1, "name": "Apple iPhone 16 Pro", "price": "1.167 €" },
+    { "image": image3, "name": "Apple AirPods 4", "price": "149 €" },
 ]
 const mainFeatured =
-    { "image": "white", "name": "Apple Mac", "price": "663 €" }
+    { "image": image4, "name": "Apple Mac", "price": "663 €" }
 
 
 export default function FeatureProducts() {
@@ -17,16 +22,16 @@ export default function FeatureProducts() {
         <section className="featured_block">
             <div className="featured_image_main">
                 <div className="featured_image_main_content">
-                    <h3>
-                        {mainFeatured.name}
-                    </h3>
                     <p>
-                        {mainFeatured.price}
+                        {mainFeatured.name}
                     </p>
+                    <h3>
+                        {mainFeatured.price}
+                    </h3>
                 </div>
                 <img
-                    style={{background:mainFeatured.image}}
-                    // src={mainFeatured.image}
+                    // style={{background:mainFeatured.image}}
+                    src={mainFeatured.image}
                 />
             </div>
             <div className="featured_grid">
