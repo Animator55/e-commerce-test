@@ -99,3 +99,14 @@ select {
     color: var(--cmain);
     background-color: white;
 }
+
+
+.hidden {
+    opacity: 0;
+    transition: opacity 600ms;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 1000ms;
+}

@@ -17,7 +17,7 @@ const mainFeatured =
 
 
 export default function FeatureProducts() {
-    return <section className="block --featured_block" id="Featured">
+    return <section className="block --featured_block hidden" id="Featured">
         <h3><b style={{color: "var(--cmain)"}}>Feature</b> Products</h3>
         <section className="featured_block">
             <div className="featured_image_main">

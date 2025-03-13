@@ -81,7 +81,7 @@ export default function Clients() {
         }, 300)
     }
 
-    return <section className="block clients-block" id="Clients">
+    return <section className="block clients-block hidden" id="Clients">
         <h3>What our <b style={{color: "var(--cmain)"}}>Clients</b> say</h3>
         <div className="carrousel">
             <button onClick={() => { move(prevIndex, true) }}>

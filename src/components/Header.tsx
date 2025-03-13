@@ -9,7 +9,7 @@ import image4 from "../assets/images/phone-2.jpg"
 
 const clientsList: { image: any, name: string, description: string, price: string }[] = [
     { "image": image1, "name": "Apple iPhone 16 Pro", "description": "Smartphone de 128GB con pantalla Super Retina XDR de 6,1 pulgadas, chip A18 Bionic y sistema de cámara Pro.", "price": "1.167 €" },
-    { "image": image2, "name": "Apple iPad 10,9\" (2024) Wi-Fi (10ª Gen)", "description": "Tablet con pantalla de 10,9 pulgadas, chip A14 Bionic y 64GB de almacenamiento.", "price": "369 €" },
+    { "image": image2, "name": "Apple iPad 10,9\"", "description": "Tablet con pantalla de 10,9 pulgadas, chip A14 Bionic y 64GB de almacenamiento.", "price": "369 €" },
     { "image": image3, "name": "Apple AirPods 4", "description": "Auriculares inalámbricos Bluetooth con estuche de carga y cancelación activa de ruido.", "price": "149 €" },
     { "image": image4, "name": "Samsung Galaxy S25", "description": "Smartphone con pantalla AMOLED de 6,2 pulgadas, procesador Exynos 2200 y cámara triple de 50MP.", "price": "799 €" },
 ]
@@ -39,12 +39,12 @@ export default function Header() {
     const nexIndex = carrouselIndex + 1 === clientsList.length ? 0 : (carrouselIndex + 1)
 
     const move = (index: number, toLeft: boolean) => {
-        let carrousel = document.querySelector(".carrousel") as HTMLDivElement
+        let carrousel = document.querySelector(".header-carrousel") as HTMLDivElement
         if (carrousel) carrousel.classList.add(toLeft ? "rotate-toLeft" : "rotate-toRight")
         setTimeout(() => {
             setIndex(index)
             if (carrousel) carrousel.classList.remove(toLeft ? "rotate-toLeft" : "rotate-toRight")
-        }, 300)
+        }, 310)
     }
 
     return <ul className="header-carrousel" id="Top">
